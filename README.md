@@ -23,5 +23,5 @@ Looking forward to hearing from you!
 ---
 
 > I am also part of **Team Cold Noodles**, a small team that develops games and provides game development services: <br />
-> [![Static Badge](https://img.shields.io/badge/teamcoldnoodles.com-92929b?label=GameDev%20Website)](https://teamcoldnoodles.com) [![Static Badge](https://img.shields.io/badge/Itch.io-af85d5?label=Check%20our%20games%20out)]([https://ko-fi.com/teamcoldnoodles](https://teamcoldnoodles.itch.io/)) [![Static Badge](https://img.shields.io/badge/ko--fi-f59e0b?label=Buy%20Me%20A%20Coffee)](https://ko-fi.com/teamcoldnoodles)
+> [![Static Badge](https://img.shields.io/badge/teamcoldnoodles.com-92929b?label=GameDev%20Website)](https://teamcoldnoodles.com) [![Static Badge](https://img.shields.io/badge/Itch.io-af85d5?label=Check%20our%20games%20out)](https://teamcoldnoodles.itch.io/) [![Static Badge](https://img.shields.io/badge/ko--fi-f59e0b?label=Buy%20Me%20A%20Coffee)](https://ko-fi.com/teamcoldnoodles)
 
