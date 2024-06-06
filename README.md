@@ -1,4 +1,7 @@
-# Hey there!
+![Static Badge](./header.png)
+
+---
+<br />
 
 I'm **João Victor**, a seasoned software engineer with over a decade of experience under my belt.
 <br />
@@ -8,12 +11,11 @@ I'm all ears for your offers and ideas, so let's collaborate and make something 
 <br />
 Looking forward to hearing from you!
 <br />
+<br />
 
 ---
 
-> [![Static Badge](https://img.shields.io/badge/joaovictor.com-f59e0b?label=Personal%20Website)](https://joaovictor.com) [![Static Badge](https://img.shields.io/badge/ko--fi-f59e0b?label=Buy%20Me%20A%20Coffee)](https://ko-fi.com/joaovictorlouro)
-
-> [![Static Badge](https://img.shields.io/badge/Profile-blue?label=LinkedIn)](https://linkedin.com/in/joao-louro)
+> [![Static Badge](https://img.shields.io/badge/joaovictor.com-f59e0b?label=Personal%20Website)](https://joaovictor.com) [![Static Badge](https://img.shields.io/badge/ko--fi-f59e0b?label=Buy%20Me%20A%20Coffee)](https://ko-fi.com/joaovictorlouro) <br /> [![Static Badge](https://img.shields.io/badge/Profile-blue?label=LinkedIn)](https://linkedin.com/in/joao-louro)
 
 ---
 
