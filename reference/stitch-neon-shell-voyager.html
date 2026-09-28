@@ -1,0 +1,3350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Sora:wght@100..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "tertiary-container": "#fbcbff",
+              "on-secondary-fixed-variant": "#5e4200",
+              "secondary": "#ffdb9d",
+              "surface-charcoal": "#0D0E10",
+              "surface-bright": "#38393a",
+              "on-secondary-fixed": "#271900",
+              "on-tertiary": "#560069",
+              "secondary-fixed-dim": "#ffba20",
+              "on-tertiary-container": "#a100c3",
+              "on-primary-container": "#006a71",
+              "on-background": "#e3e2e3",
+              "surface-container-high": "#292a2b",
+              "deep-violet": "#6200FF",
+              "light-leak-pink": "rgba(255, 0, 200, 0.2)",
+              "surface-dim": "#121315",
+              "tertiary-fixed-dim": "#f5adff",
+              "inverse-primary": "#00696f",
+              "on-surface": "#e3e2e3",
+              "on-tertiary-fixed-variant": "#7a0094",
+              "on-tertiary-fixed": "#340041",
+              "background": "#121315",
+              "error": "#ffb4ab",
+              "outline": "#849495",
+              "on-primary-fixed": "#002022",
+              "surface-container-highest": "#343536",
+              "tertiary-fixed": "#fdd6ff",
+              "outline-variant": "#3a494b",
+              "primary-fixed-dim": "#00dbe7",
+              "surface-tint": "#00dbe7",
+              "surface": "#121315",
+              "on-primary-fixed-variant": "#004f54",
+              "tertiary": "#fff4fb",
+              "primary": "#e1fdff",
+              "inverse-on-surface": "#303032",
+              "on-surface-variant": "#b9cacb",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#1f2021",
+              "inverse-surface": "#e3e2e3",
+              "on-primary": "#00363a",
+              "surface-container-low": "#1b1c1d",
+              "lantern-amber": "#FFB800",
+              "glow-cyan": "rgba(0, 242, 255, 0.4)",
+              "primary-fixed": "#74f5ff",
+              "neon-teal": "#00F2FF",
+              "on-secondary-container": "#6b4b00",
+              "surface-container-lowest": "#0d0e0f",
+              "on-secondary": "#412d00",
+              "on-error": "#690005",
+              "cyber-magenta": "#FF00C8",
+              "secondary-container": "#feb700",
+              "secondary-fixed": "#ffdea8",
+              "surface-variant": "#343536",
+              "primary-container": "#00f2ff",
+              "error-container": "#93000a",
+              "lantern-yellow": "#F9FF00",
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px",
+            },
+            "spacing": {
+              "margin-mobile": "16px",
+              "container-max": "1280px",
+              "unit": "4px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+            },
+            "fontFamily": {
+              "body-lg": ["Hanken Grotesk"],
+              "label-md": ["JetBrains Mono"],
+              "headline-md": ["Sora"],
+              "body-md": ["Hanken Grotesk"],
+              "headline-lg": ["Sora"],
+              "headline-xl": ["Sora"],
+              "label-sm": ["JetBrains Mono"],
+              "headline-lg-mobile": ["Sora"],
+            },
+            "fontSize": {
+              "body-lg": ["18px", {
+                "lineHeight": "1.6",
+                "fontWeight": "400",
+              }],
+              "label-md": ["14px", {
+                "lineHeight": "1.4",
+                "letterSpacing": "0.05em",
+                "fontWeight": "500",
+              }],
+              "headline-md": ["24px", {
+                "lineHeight": "1.3",
+                "fontWeight": "600",
+              }],
+              "body-md": ["16px", {
+                "lineHeight": "1.6",
+                "fontWeight": "400",
+              }],
+              "headline-lg": ["40px", {
+                "lineHeight": "1.2",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700",
+              }],
+              "headline-xl": ["64px", {
+                "lineHeight": "1.1",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "800",
+              }],
+              "label-sm": ["12px", {
+                "lineHeight": "1.4",
+                "letterSpacing": "0.1em",
+                "fontWeight": "500",
+              }],
+              "headline-lg-mobile": ["32px", {
+                "lineHeight": "1.2",
+                "fontWeight": "700",
+              }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen selection:bg-neon-teal selection:text-surface-container-lowest"
+  >
+    <header
+      class="fixed top-0 w-full z-50 bg-surface-charcoal/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.5)]"
+    >
+      <div
+        class="h-16 max-w-container-max mx-auto px-margin-mobile lg:px-gutter flex items-center justify-between gap-4"
+      >
+        <div class="flex items-center gap-4 lg:gap-6">
+          <div class="flex items-center gap-3">
+            <img
+              alt="Cyberpunk profile avatar icon badge with glowing neon visor, HUD targeting elements and operative designation"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VFURrbzLlCpwLz5mO5ZMNOJVQkTTAQXgGKw4F47lTM5pIfotLKCAxj0AHGBc5yDhMoEAs1bRpB4WLCg3WX4e2EufAYh523mtyyLBz2FfJ6RitcY2oGyXGPsY9c1pIWmaegLJ6Vo8DvYvMTI0VJI_ZhBXq00wSE8pfEafnYhuR1uWwWPt6qlIs5L11dTsJMjchXotOTAw65weUtkbyrk8C6qDs2sBYC0ubP-gYGBvg6RxKhVG9GWdPOYD8"
+            /><span
+              class="font-label-md text-label-md font-bold tracking-wider text-neon-teal uppercase hidden sm:inline"
+            >NEO_HUB</span>
+          </div>
+          <div
+            class="hidden md:flex items-center bg-surface-container-low px-3 py-1.5 rounded-lg border-b border-outline-variant/40"
+          >
+            <span
+              class="material-symbols-outlined text-outline text-[18px] mr-2"
+            >search</span><span
+              class="font-label-sm text-label-sm text-on-surface-variant"
+            >Type [/] to search cyberware or repos...</span><span
+              class="ml-4 font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-outline"
+            >cmd + k</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 lg:gap-6">
+          <nav
+            class="hidden lg:flex items-center gap-5"
+            data-active-classes="text-neon-teal font-bold"
+          >
+            <a
+              aria-current="page"
+              class="transition-colors text-neon-teal font-bold"
+              data-path="overview"
+              href="#"
+            >Overview</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="repositories"
+              href="#"
+            >Repositories</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="projects"
+              href="#"
+            >Projects</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="packages"
+              href="#"
+            >Packages</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="stars"
+              href="#"
+            >Stars</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="pull-requests"
+              href="#"
+            >Pulls</a><a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="issues"
+              href="#"
+            >Issues</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <button
+              class="p-1.5 rounded text-on-surface-variant hover:text-neon-teal hover:bg-surface-container-high transition-colors"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+              >notifications</span>
+            </button>
+            <button
+              class="p-1.5 rounded text-on-surface-variant hover:text-neon-teal hover:bg-surface-container-high transition-colors"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+            <div
+              class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="w-full pt-16 bg-surface-container-lowest min-h-[calc(100vh-140px)]"
+    >
+      <div class="flex flex-col w-full">
+        <!-- Subtle ambient glow leaks -->
+        <div
+          class="relative w-full max-w-container-max mx-auto px-margin-mobile lg:px-gutter py-8"
+        >
+          <div
+            class="absolute top-12 left-10 w-96 h-96 bg-neon-teal/5 rounded-full blur-[140px] pointer-events-none -z-10"
+          >
+          </div>
+          <div
+            class="absolute top-80 right-20 w-[480px] h-[480px] bg-cyber-magenta/5 rounded-full blur-[160px] pointer-events-none -z-10"
+          >
+          </div>
+          <!-- PROFILE LAYOUT: Two Column GitHub Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- ========================================== -->
+            <!-- LEFT SIDEBAR: Operative Profile Identity   -->
+            <!-- ========================================== -->
+            <aside class="lg:col-span-4 xl:col-span-3 flex flex-col gap-6">
+              <!-- Avatar & Live Matrix Status -->
+              <div class="flex flex-col items-center sm:items-start">
+                <div class="relative group">
+                  <div
+                    class="absolute -inset-1 rounded-full bg-gradient-to-r from-neon-teal via-deep-violet to-cyber-magenta opacity-70 blur-md group-hover:opacity-100 transition-opacity duration-500 animate-pulse"
+                  >
+                  </div>
+                  <div
+                    class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-64 lg:h-64 rounded-full overflow-hidden bg-surface-charcoal p-1"
+                  >
+                    <img
+                      alt="Operative NEO_NOMAD Avatar with glowing visor"
+                      class="w-full h-full object-cover rounded-full"
+                      src="https://lh3.googleusercontent.com/aida/AEtjO1VFURrbzLlCpwLz5mO5ZMNOJVQkTTAQXgGKw4F47lTM5pIfotLKCAxj0AHGBc5yDhMoEAs1bRpB4WLCg3WX4e2EufAYh523mtyyLBz2FfJ6RitcY2oGyXGPsY9c1pIWmaegLJ6Vo8DvYvMTI0VJI_ZhBXq00wSE8pfEafnYhuR1uWwWPt6qlIs5L11dTsJMjchXotOTAw65weUtkbyrk8C6qDs2sBYC0ubP-gYGBvg6RxKhVG9GWdPOYD8"
+                    />
+                    <!-- Holographic Scanline Overlay -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-b from-transparent via-neon-teal/10 to-transparent pointer-events-none mix-blend-screen opacity-60"
+                    >
+                    </div>
+                  </div>
+                  <!-- Online Status Chip Indicator -->
+                  <div
+                    class="absolute bottom-4 right-4 bg-surface-charcoal/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.4)] flex items-center gap-2"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-neon-teal animate-ping"
+                    ></span>
+                    <span
+                      class="font-label-sm text-label-sm text-neon-teal font-bold tracking-wider"
+                    >SEC_4 // ONLINE</span>
+                  </div>
+                </div>
+                <!-- Operative Names & Designation -->
+                <div class="mt-5 w-full">
+                  <div class="flex items-baseline justify-between">
+                    <h1
+                      class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight flex items-center gap-2"
+                    >
+                      NEO_NOMAD
+                      <span
+                        class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-neon-teal font-semibold"
+                      >#894</span>
+                    </h1>
+                  </div>
+                  <p
+                    class="font-label-md text-label-md text-on-surface-variant font-medium mt-0.5 flex items-center gap-1.5"
+                  >
+                    <span>@kaiju_nomad</span>
+                    <span class="text-outline text-xs">/</span>
+                    <span class="text-outline text-xs">he/they</span>
+                  </p>
+                  <p
+                    class="font-body-md text-body-md text-on-surface mt-3 leading-relaxed"
+                  >
+                    Digital Nomad &amp; Cyberdeck Architect. Building
+                    distributed systems in neon-lit Tokyo &amp; beyond. Void_OS
+                    maintainer.
+                  </p>
+                  <!-- Action Controls -->
+                  <div class="mt-4 flex flex-col gap-2 w-full">
+                    <button
+                      class="w-full py-2 px-4 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(0,0,0,0.4)]"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-neon-teal"
+                      >terminal</span>
+                      <span>Edit Operative Dossier</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Operative Telemetry & Follower Metrics -->
+              <div
+                class="flex items-center gap-4 font-label-sm text-label-sm text-on-surface-variant py-2"
+              >
+                <div
+                  class="flex items-center gap-1.5 hover:text-neon-teal transition-colors cursor-pointer"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-neon-teal"
+                  >group</span>
+                  <span class="font-bold text-on-surface">3.8k</span> followers
+                </div>
+                <span>·</span>
+                <div
+                  class="flex items-center gap-1.5 hover:text-neon-teal transition-colors cursor-pointer"
+                >
+                  <span class="font-bold text-on-surface">246</span> following
+                </div>
+                <span>·</span>
+                <div
+                  class="flex items-center gap-1.5 hover:text-lantern-amber transition-colors cursor-pointer"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-lantern-amber"
+                  >star</span>
+                  <span class="font-bold text-on-surface">1.4k</span> stars
+                </div>
+              </div>
+              <!-- Metadata Attributes -->
+              <div
+                class="flex flex-col gap-2.5 font-label-sm text-label-sm text-on-surface-variant"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-outline text-[18px]"
+                  >corporate_fare</span>
+                  <span class="text-on-surface font-medium"
+                  >Neo-Tokyo Outpost / Ghost Protocol</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-neon-teal text-[18px]"
+                  >location_on</span>
+                  <span>Tokyo, JP (Sector 4) <span class="text-outline"
+                    >35.6762° N, 139.6503° E</span></span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-lantern-amber text-[18px]"
+                  >schedule</span>
+                  <span>Local Time: <span
+                      class="text-lantern-amber font-mono font-semibold"
+                    >02:41 AM JST (UTC+9)</span></span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-outline text-[18px]"
+                  >link</span>
+                  <a
+                    class="text-neon-teal hover:underline tracking-tight"
+                    href="#"
+                  >neo-nomad.v1/stack</a>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-outline text-[18px]"
+                  >alternate_email</span>
+                  <a
+                    class="text-on-surface hover:text-neon-teal transition-colors"
+                    href="#"
+                  >@neo_nomad</a>
+                </div>
+              </div>
+              <!-- Cybernetic Badges & Honors -->
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-3"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-sm text-label-sm font-bold text-on-surface tracking-wider uppercase"
+                  >Honors &amp; Cyber-Certs</span>
+                  <span
+                    class="font-label-sm text-label-sm text-neon-teal font-mono"
+                  >L9</span>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <div
+                    class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-neon-teal shadow-[0_0_10px_rgba(0,242,255,0.15)] group"
+                    title="Arctic Code Vault Contributor"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                    >ac_unit</span>
+                    <span class="font-label-sm text-label-sm font-medium"
+                    >Arctic Vault</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-cyber-magenta shadow-[0_0_10px_rgba(255,0,200,0.15)] group"
+                    title="Cybernetic Pull Shark"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                    >water</span>
+                    <span class="font-label-sm text-label-sm font-medium"
+                    >Pull Shark x2</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-lantern-amber shadow-[0_0_10px_rgba(255,184,0,0.15)] group"
+                    title="Mars 2020 Helicopter Contributor"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                    >flight</span>
+                    <span class="font-label-sm text-label-sm font-medium"
+                    >Mars Ingenuity</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant group"
+                    title="Quickdraw"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[16px] text-neon-teal"
+                    >bolt</span>
+                    <span class="font-label-sm text-label-sm font-medium"
+                    >Quickdraw</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Guilds & Factions (Organizations) -->
+              <div class="flex flex-col gap-3">
+                <span
+                  class="font-label-sm text-label-sm font-bold text-on-surface tracking-wider uppercase"
+                >Syndicates &amp; Networks</span>
+                <div class="grid grid-cols-5 gap-2">
+                  <div
+                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-neon-teal hover:scale-105 transition-transform shadow-[0_0_10px_rgba(0,242,255,0.2)]"
+                    title="Ghost Protocol Security"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                    >security</span>
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-cyber-magenta hover:scale-105 transition-transform shadow-[0_0_10px_rgba(255,0,200,0.2)]"
+                    title="Void Kernel Labs"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                    >memory</span>
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-lantern-amber hover:scale-105 transition-transform shadow-[0_0_10px_rgba(255,184,0,0.2)]"
+                    title="Tokyo Mesh Collective"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                    >hub</span>
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary-fixed-dim hover:scale-105 transition-transform"
+                    title="Rust Low-Level WG"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                    >precision_manufacturing</span>
+                  </div>
+                  <div
+                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-on-surface hover:scale-105 transition-transform"
+                    title="Decentralized Satellite Project"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                    >satellite_alt</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <!-- ========================================== -->
+            <!-- RIGHT MAIN CONTENT: Dossier & Artifacts    -->
+            <!-- ========================================== -->
+            <main
+              class="lg:col-span-8 xl:col-span-9 flex flex-col gap-8 min-w-0"
+            >
+              <!-- 1. PROFILE README.MD CONTAINER -->
+              <article
+                class="w-full bg-surface-container-low rounded-xl overflow-hidden shadow-2xl flex flex-col"
+              >
+                <!-- File Header -->
+                <div
+                  class="px-4 py-2.5 bg-surface-container flex items-center justify-between"
+                >
+                  <div
+                    class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[16px] text-neon-teal"
+                    >draft</span>
+                    <span class="text-on-surface-variant font-medium"
+                    >neo_nomad</span>
+                    <span class="text-outline">/</span>
+                    <span class="font-bold text-neon-teal">README.md</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-on-surface-variant">
+                    <span
+                      class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-outline"
+                    >RAW</span>
+                    <span
+                      class="material-symbols-outlined text-[18px] text-outline hover:text-neon-teal cursor-pointer"
+                    >edit</span>
+                  </div>
+                </div>
+                <!-- Visual Hero Graphic Banner -->
+                <div
+                  class="relative w-full h-48 sm:h-64 md:h-72 overflow-hidden bg-surface-charcoal"
+                >
+                  <img
+                    alt="Cyberpunk developer cyberdeck setup with neon code HUD"
+                    class="w-full h-full object-cover filter contrast-125"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9DKUdkodKNH2lzMaqtTawzsmwQVEdvB6mr60DPUGdwT3tuYs7wGGC1lA-FrfLsWdGWTd1rsFR8PxFt7rzlAf3TTXRK5kEag8TFJk4bQGZykoBiie0cUrh6lXH0iGCfTM5IWo9qewaxRU0SwkvJnSpJeT5kMbQzFeJZyeM6rSOF0XhTGw2ruC_064LP_OLLxERDeJHg9-vD1AXGjmyI0uAQZGeTjmo7x9077DGFlole1lxKS4l7KMT"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"
+                  >
+                  </div>
+                  <!-- Matrix HUD Telemetry Text Overlay -->
+                  <div
+                    class="absolute bottom-4 left-6 right-6 flex items-end justify-between"
+                  >
+                    <div>
+                      <span
+                        class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-neon-teal text-surface-container-lowest font-black uppercase tracking-widest"
+                      >TRANSMISSION // ACTIVE</span>
+                      <h2
+                        class="font-headline-lg text-headline-lg font-black text-primary tracking-tight mt-1 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
+                      >
+                        SYSTEM_ONLINE // HELLO_WORLD.MD
+                      </h2>
+                    </div>
+                    <div
+                      class="hidden sm:flex flex-col items-end font-label-sm text-label-sm text-neon-teal font-mono"
+                    >
+                      <span>NODE: NRT_SHINJUKU_04</span>
+                      <span class="text-lantern-amber">LATENCY: 1.4ms</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Readme Content Body -->
+                <div class="p-6 md:p-8 flex flex-col gap-6">
+                  <!-- Mission Directive Statement -->
+                  <div
+                    class="p-4 rounded-lg bg-surface-container/70 flex items-start gap-4"
+                  >
+                    <span
+                      class="material-symbols-outlined text-neon-teal text-[28px] mt-0.5"
+                    >terminal</span>
+                    <div>
+                      <p
+                        class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed"
+                      >
+                        High-density systems engineer, distributed node
+                        operator, and nocturnal explorer. Modding bespoke
+                        portable mechanical decks, writing zero-latency
+                        telemetry pipelines, and navigating the neon back-alleys
+                        of East Asia.
+                      </p>
+                      <div
+                        class="flex items-center gap-2 mt-2 font-label-sm text-label-sm text-outline"
+                      >
+                        <span>STATUS: COMMITTED TO THE VOID</span>
+                        <span>•</span>
+                        <span class="text-neon-teal"
+                        >BUILD: v2.89.4_RELEASE</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Two-Column Dossier Content -->
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch"
+                  >
+                    <!-- Left Sub-column: Channels & Active Ops -->
+                    <div class="md:col-span-7 flex flex-col gap-4">
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="material-symbols-outlined text-cyber-magenta text-[20px]"
+                        >sensors</span>
+                        <h3
+                          class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight"
+                        >
+                          TRANSMISSION_CHANNELS &amp; ACTIVE_OPS
+                        </h3>
+                      </div>
+                      <ul
+                        class="flex flex-col gap-3 font-body-md text-body-md text-on-surface-variant"
+                      >
+                        <li class="flex items-start gap-2.5">
+                          <span
+                            class="material-symbols-outlined text-neon-teal text-[18px] mt-1 shrink-0"
+                          >radar</span>
+                          <span><strong class="text-on-surface"
+                            >Currently engineering:</strong> Decentralized P2P
+                            mesh relay networks (<code
+                              class="bg-surface-container px-1.5 py-0.5 rounded text-neon-teal font-label-sm text-label-sm"
+                            >void-mesh-core</code>) for disconnected field
+                            setups.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                          <span
+                            class="material-symbols-outlined text-lantern-amber text-[18px] mt-1 shrink-0"
+                          >code</span>
+                          <span><strong class="text-on-surface"
+                            >Tech Arsenal:</strong> Rust, Go, WebAssembly,
+                            Kubernetes, TypeScript, NixOS, Void_OS kernel
+                            modules.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                          <span
+                            class="material-symbols-outlined text-cyber-magenta text-[18px] mt-1 shrink-0"
+                          >explore</span>
+                          <span><strong class="text-on-surface"
+                            >Next Sector Uplink:</strong> Relocating hub node to
+                            Bangkok &amp; Chiang Mai nomad clusters (Q3
+                            2025).</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                          <span
+                            class="material-symbols-outlined text-neon-teal text-[18px] mt-1 shrink-0"
+                          >forum</span>
+                          <span><strong class="text-on-surface"
+                            >Ask me about:</strong> Cyberdeck physical hardware
+                            milling, zero-knowledge zk-SNARK proofs, and rainy
+                            neon Tokyo photography.</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Right Sub-column: Live Feed Outpost Photo Card -->
+                    <div class="md:col-span-5 flex flex-col">
+                      <div
+                        class="relative w-full h-full min-h-[220px] rounded-lg overflow-hidden bg-surface-charcoal shadow-lg group"
+                      >
+                        <img
+                          alt="Tokyo megacity neon street in rain with cyberdeck workstation"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          src="https://lh3.googleusercontent.com/aida/AEtjO1V7wObTVtZrExZH3vz7q7v64eSPu2XagNUhwfmE_0TdkrWEpyPAV59TOLrjfZbcdA1mreIXesXRcoy73p7Cqxtc5WhQSTTHrD1S5GOOTDolpHMJklSXaaoJL-3_mGHHk9oa5ppWKQaf-Dh-lgiABKekrUAoem_Qq2__NTHUS3urJIK7iLjsmaldY4K0-MR8DysCAjHIia25AHc2ARUDyyVe-QtzM5DiY7V7tCh6WhG1wo-oWNKvzv9dqg"
+                        />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-surface-charcoal/90 via-surface-charcoal/20 to-transparent"
+                        >
+                        </div>
+                        <!-- Camera Watermark HUD -->
+                        <div
+                          class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-charcoal/80 backdrop-blur font-label-sm text-label-sm text-cyber-magenta font-mono flex items-center gap-1.5"
+                        >
+                          <span
+                            class="w-2 h-2 rounded-full bg-cyber-magenta animate-pulse"
+                          ></span>
+                          REC // CAM_04
+                        </div>
+                        <div
+                          class="absolute bottom-3 left-3 right-3 flex flex-col"
+                        >
+                          <span
+                            class="font-label-sm text-label-sm text-neon-teal font-bold uppercase tracking-wider"
+                          >LOC: Neo-Tokyo Shinjuku Outpost</span>
+                          <span
+                            class="font-label-sm text-label-sm text-outline text-xs"
+                          >Optics feed via Nomad Mobile Terminal</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- GitHub Cyber Telemetry Stats Bento Cards -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                    <!-- Telemetry Card 1: Operative GitHub Stats -->
+                    <div
+                      class="p-5 rounded-lg bg-surface-container flex flex-col justify-between shadow-md"
+                    >
+                      <div class="flex items-center justify-between mb-4">
+                        <span
+                          class="font-label-sm text-label-sm font-bold text-neon-teal tracking-wider uppercase flex items-center gap-2"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >query_stats</span>
+                          OPERATIVE TELEMETRY
+                        </span>
+                        <span class="font-label-sm text-label-sm text-outline"
+                        >ANNUAL_SYNC</span>
+                      </div>
+                      <div class="grid grid-cols-2 gap-4 font-mono">
+                        <div>
+                          <span
+                            class="font-label-sm text-label-sm text-on-surface-variant block"
+                          >Total Commits</span>
+                          <span
+                            class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight"
+                          >4,892</span>
+                          <div
+                            class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-neon-teal w-4/5 shadow-[0_0_8px_rgba(0,242,255,0.8)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="font-label-sm text-label-sm text-on-surface-variant block"
+                          >Total Stars</span>
+                          <span
+                            class="font-headline-md text-headline-md font-bold text-lantern-amber tracking-tight"
+                          >1,420</span>
+                          <div
+                            class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-lantern-amber w-2/3 shadow-[0_0_8px_rgba(255,184,0,0.8)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="font-label-sm text-label-sm text-on-surface-variant block"
+                          >Pull Requests</span>
+                          <span
+                            class="font-headline-md text-headline-md font-bold text-cyber-magenta tracking-tight"
+                          >342</span>
+                          <div
+                            class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-cyber-magenta w-3/4 shadow-[0_0_8px_rgba(255,0,200,0.8)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <span
+                            class="font-label-sm text-label-sm text-on-surface-variant block"
+                          >Repositories</span>
+                          <span
+                            class="font-headline-md text-headline-md font-bold text-primary tracking-tight"
+                          >88</span>
+                          <div
+                            class="w-full h-1 bg-surface-container-high rounded-full mt-1.5 overflow-hidden"
+                          >
+                            <div class="h-full bg-primary-fixed-dim w-1/2">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Telemetry Card 2: Language Matrix -->
+                    <div
+                      class="p-5 rounded-lg bg-surface-container flex flex-col justify-between shadow-md"
+                    >
+                      <div class="flex items-center justify-between mb-4">
+                        <span
+                          class="font-label-sm text-label-sm font-bold text-lantern-amber tracking-wider uppercase flex items-center gap-2"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >memory</span>
+                          TECH MATRIX &amp; PROFICIENCY
+                        </span>
+                        <span class="font-label-sm text-label-sm text-outline"
+                        >SYS_ANALYSIS</span>
+                      </div>
+                      <div class="flex flex-col gap-3 font-mono">
+                        <!-- Rust -->
+                        <div>
+                          <div
+                            class="flex justify-between font-label-sm text-label-sm mb-1"
+                          >
+                            <span
+                              class="text-on-surface flex items-center gap-1.5"
+                            ><span
+                                class="w-2 h-2 rounded-full bg-neon-teal"
+                              ></span>Rust (Systems / WebAssembly)</span>
+                            <span class="text-neon-teal font-bold">44.0%</span>
+                          </div>
+                          <div
+                            class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-neon-teal w-[44%] shadow-[0_0_6px_rgba(0,242,255,0.7)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Go -->
+                        <div>
+                          <div
+                            class="flex justify-between font-label-sm text-label-sm mb-1"
+                          >
+                            <span
+                              class="text-on-surface flex items-center gap-1.5"
+                            ><span
+                                class="w-2 h-2 rounded-full bg-cyber-magenta"
+                              ></span>Go (Cloud Infrastructure)</span>
+                            <span class="text-cyber-magenta font-bold"
+                            >26.0%</span>
+                          </div>
+                          <div
+                            class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-cyber-magenta w-[26%] shadow-[0_0_6px_rgba(255,0,200,0.7)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- TypeScript -->
+                        <div>
+                          <div
+                            class="flex justify-between font-label-sm text-label-sm mb-1"
+                          >
+                            <span
+                              class="text-on-surface flex items-center gap-1.5"
+                            ><span
+                                class="w-2 h-2 rounded-full bg-lantern-amber"
+                              ></span>TypeScript (Frontend &amp; Deck UI)</span>
+                            <span class="text-lantern-amber font-bold"
+                            >18.0%</span>
+                          </div>
+                          <div
+                            class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"
+                          >
+                            <div
+                              class="h-full bg-lantern-amber w-[18%] shadow-[0_0_6px_rgba(255,184,0,0.7)]"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- C / C++ -->
+                        <div>
+                          <div
+                            class="flex justify-between font-label-sm text-label-sm mb-1"
+                          >
+                            <span
+                              class="text-on-surface flex items-center gap-1.5"
+                            ><span
+                                class="w-2 h-2 rounded-full bg-secondary-fixed"
+                              ></span>C / C++ (Hardware Firmware)</span>
+                            <span class="text-on-surface-variant font-bold"
+                            >12.0%</span>
+                          </div>
+                          <div
+                            class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"
+                          >
+                            <div class="h-full bg-secondary-fixed w-[12%]">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Terminal System Activity Log -->
+                  <div
+                    class="rounded-lg bg-surface-charcoal p-4 font-mono text-label-sm"
+                  >
+                    <div
+                      class="flex items-center justify-between text-outline pb-2 mb-2"
+                    >
+                      <span class="flex items-center gap-2 text-neon-teal">
+                        <span class="material-symbols-outlined text-[16px]"
+                        >terminal</span>
+                        <span>SYSTEM_DEPLOYMENT_TIMELINE.LOG</span>
+                      </span>
+                      <span>TTY-894</span>
+                    </div>
+                    <div class="flex flex-col gap-1.5 text-on-surface-variant">
+                      <p>
+                        <span class="text-lantern-amber">[02:14:08]</span> <span
+                          class="text-neon-teal"
+                        >git push</span> origin void-mesh-core:main <span
+                          class="text-outline"
+                        >— commit 8f9b02a "feat: zero-loss packet
+                          buffering"</span>
+                      </p>
+                      <p>
+                        <span class="text-lantern-amber">[01:45:22]</span> <span
+                          class="text-cyber-magenta"
+                        >sysctl</span> reload nomad-satellite-sync <span
+                          class="text-outline"
+                        >— daemon sync handshake verified</span>
+                      </p>
+                      <p>
+                        <span class="text-lantern-amber">[00:32:10]</span> <span
+                          class="text-neon-teal"
+                        >docker build</span> -t tokyo-neon-theme:v4.2 <span
+                          class="text-outline"
+                        >— build succeeded with 0 errors</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- 2. PINNED REPOSITORIES GRID -->
+              <section class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <h2
+                    class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-neon-teal text-[22px]"
+                    >push_pin</span>
+                    <span>Pinned Deployments</span>
+                  </h2>
+                  <button
+                    class="font-label-sm text-label-sm text-neon-teal hover:underline tracking-tight"
+                  >
+                    Customize pins
+                  </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Repo 1: void-mesh-core -->
+                  <div
+                    class="p-5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <a
+                          class="font-headline-md text-[18px] font-bold text-neon-teal hover:underline flex items-center gap-2"
+                          href="#"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >folder_special</span>
+                          <span>void-mesh-core</span>
+                        </a>
+                        <span
+                          class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant"
+                        >Public</span>
+                      </div>
+                      <p
+                        class="font-body-md text-body-md text-on-surface-variant mt-2.5 leading-snug"
+                      >
+                        Zero-latency decentralized P2P telemetry protocol for
+                        remote nomadic cyberdecks in low-bandwidth zones.
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 mt-5 font-label-sm text-label-sm text-on-surface-variant"
+                    >
+                      <span class="flex items-center gap-1.5"><span
+                          class="w-3 h-3 rounded-full bg-neon-teal"
+                        ></span>Rust</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-lantern-amber cursor-pointer"
+                      ><span
+                          class="material-symbols-outlined text-[16px] text-lantern-amber"
+                        >star</span>842</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-neon-teal cursor-pointer"
+                      ><span class="material-symbols-outlined text-[16px]"
+                        >fork_right</span>120</span>
+                    </div>
+                  </div>
+                  <!-- Repo 2: tokyo-neon-theme -->
+                  <div
+                    class="p-5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <a
+                          class="font-headline-md text-[18px] font-bold text-cyber-magenta hover:underline flex items-center gap-2"
+                          href="#"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >palette</span>
+                          <span>tokyo-neon-theme</span>
+                        </a>
+                        <span
+                          class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant"
+                        >Public</span>
+                      </div>
+                      <p
+                        class="font-body-md text-body-md text-on-surface-variant mt-2.5 leading-snug"
+                      >
+                        High-contrast Blade Runner &amp; Ghost in the Shell
+                        terminal, Kitty &amp; Neovim atmospheric color palette.
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 mt-5 font-label-sm text-label-sm text-on-surface-variant"
+                    >
+                      <span class="flex items-center gap-1.5"><span
+                          class="w-3 h-3 rounded-full bg-cyber-magenta"
+                        ></span>Lua / CSS</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-lantern-amber cursor-pointer"
+                      ><span
+                          class="material-symbols-outlined text-[16px] text-lantern-amber"
+                        >star</span>412</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-neon-teal cursor-pointer"
+                      ><span class="material-symbols-outlined text-[16px]"
+                        >fork_right</span>68</span>
+                    </div>
+                  </div>
+                  <!-- Repo 3: neuro-link-deck -->
+                  <div
+                    class="p-5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <a
+                          class="font-headline-md text-[18px] font-bold text-lantern-amber hover:underline flex items-center gap-2"
+                          href="#"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >keyboard</span>
+                          <span>neuro-link-deck</span>
+                        </a>
+                        <span
+                          class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant"
+                        >Public</span>
+                      </div>
+                      <p
+                        class="font-body-md text-body-md text-on-surface-variant mt-2.5 leading-snug"
+                      >
+                        Custom QMK/ZMK firmware and drivers for custom
+                        3D-printed split-ortholinear cyberdeck hardware
+                        interface.
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 mt-5 font-label-sm text-label-sm text-on-surface-variant"
+                    >
+                      <span class="flex items-center gap-1.5"><span
+                          class="w-3 h-3 rounded-full bg-lantern-amber"
+                        ></span>C++</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-lantern-amber cursor-pointer"
+                      ><span
+                          class="material-symbols-outlined text-[16px] text-lantern-amber"
+                        >star</span>289</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-neon-teal cursor-pointer"
+                      ><span class="material-symbols-outlined text-[16px]"
+                        >fork_right</span>34</span>
+                    </div>
+                  </div>
+                  <!-- Repo 4: nomad-satellite-sync -->
+                  <div
+                    class="p-5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors shadow-md flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between">
+                        <a
+                          class="font-headline-md text-[18px] font-bold text-primary hover:underline flex items-center gap-2"
+                          href="#"
+                        >
+                          <span class="material-symbols-outlined text-[18px]"
+                          >satellite</span>
+                          <span>nomad-satellite-sync</span>
+                        </a>
+                        <span
+                          class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant"
+                        >Public</span>
+                      </div>
+                      <p
+                        class="font-body-md text-body-md text-on-surface-variant mt-2.5 leading-snug"
+                      >
+                        Automated satellite uplink daemon with smart caching
+                        algorithms designed for intermittent Starlink
+                        connectivity.
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 mt-5 font-label-sm text-label-sm text-on-surface-variant"
+                    >
+                      <span class="flex items-center gap-1.5"><span
+                          class="w-3 h-3 rounded-full bg-primary-fixed-dim"
+                        ></span>Go</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-lantern-amber cursor-pointer"
+                      ><span
+                          class="material-symbols-outlined text-[16px] text-lantern-amber"
+                        >star</span>195</span>
+                      <span
+                        class="flex items-center gap-1 hover:text-neon-teal cursor-pointer"
+                      ><span class="material-symbols-outlined text-[16px]"
+                        >fork_right</span>23</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- 3. GITHUB MATRIX CONTRIBUTION HEATMAP -->
+              <section
+                class="p-6 rounded-xl bg-surface-container-low flex flex-col gap-4 shadow-xl"
+              >
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+                >
+                  <div>
+                    <h2
+                      class="font-headline-md text-headline-md font-bold text-on-surface"
+                    >
+                      2,481 contributions in 2025
+                    </h2>
+                    <p class="font-label-sm text-label-sm text-outline">
+                      Continuous streak: 184 days in Sector 4
+                    </p>
+                  </div>
+                  <!-- Contribution Filter Buttons -->
+                  <div
+                    class="flex items-center gap-2 font-label-sm text-label-sm"
+                  >
+                    <button
+                      class="px-3 py-1 rounded bg-neon-teal text-surface-container-lowest font-bold shadow-[0_0_10px_rgba(0,242,255,0.4)]"
+                    >
+                      2025
+                    </button>
+                    <button
+                      class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant"
+                    >
+                      2024
+                    </button>
+                    <button
+                      class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant"
+                    >
+                      2023
+                    </button>
+                  </div>
+                </div>
+                <!-- Heatmap Matrix Grid Rendering -->
+                <div class="w-full overflow-x-auto pb-2">
+                  <div class="min-w-[700px] flex flex-col gap-1.5">
+                    <!-- Month labels -->
+                    <div
+                      class="flex justify-between text-outline font-label-sm text-[11px] px-1"
+                    >
+                      <span>Jan</span><span>Feb</span><span>Mar</span><span
+                      >Apr</span><span>May</span><span>Jun</span>
+                      <span>Jul</span><span>Aug</span><span>Sep</span><span
+                      >Oct</span><span>Nov</span><span>Dec</span>
+                    </div>
+                    <!-- Cyber Matrix Grid SVG -->
+                    <svg
+                      aria-label="Operative Git Contribution Matrix"
+                      class="w-full h-auto overflow-visible"
+                      role="img"
+                      viewbox="0 0 780 100"
+                    >
+                      <defs>
+                        <pattern
+                          height="14"
+                          id="dot-pattern"
+                          patternunits="userSpaceOnUse"
+                          width="15"
+                        >
+                          <rect fill="#1b1c1d" height="11" rx="2" width="11">
+                          </rect>
+                        </pattern>
+                      </defs>
+                      <!-- Base Grid Background -->
+                      <rect fill="url(#dot-pattern)" height="98" width="780">
+                      </rect>
+                      <!-- Simulated Cyber Activity Nodes (Green, Emerald, Neon Cyan Overdrive) -->
+                      <!-- Week 1 - 10 -->
+                      <g fill="#26a641">
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="0"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="0"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="0"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="0"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="15"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="15"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_3px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="15"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="15"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="30"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="30"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_3px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="30"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="30"
+                          y="84"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="45"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="45"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="45"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="45"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_3px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="60"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="60"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="60"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="60"
+                          y="70"
+                        >
+                        </rect>
+                      </g>
+                      <!-- Weeks 11 - 25 High Density Clusters -->
+                      <g>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="75"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="75"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="75"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="75"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="75"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="90"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="90"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="90"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="90"
+                          y="84"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="105"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="105"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="105"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="105"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="105"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="120"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="120"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="120"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="135"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="135"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="135"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="135"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="135"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="150"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="150"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="150"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="150"
+                          y="84"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="165"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="165"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="165"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="165"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="180"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="180"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="180"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="180"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="195"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="195"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="195"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="195"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="195"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="210"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="210"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="210"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="225"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="225"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="225"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="225"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="225"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="240"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="240"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="240"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="240"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="255"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="255"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="255"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="255"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="270"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="270"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="270"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="270"
+                          y="70"
+                        >
+                        </rect>
+                      </g>
+                      <!-- Mid Year: Massive Activity Wave -->
+                      <g>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="285"
+                          y="84"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="300"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="315"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="315"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="315"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="315"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="330"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="330"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="330"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="330"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="330"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="345"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="345"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="345"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="345"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="360"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="360"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="360"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="360"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="360"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="375"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="375"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="375"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="375"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="390"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="390"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="390"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="390"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="405"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="405"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="405"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="405"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="420"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="420"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="420"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="420"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="420"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="435"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="435"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="435"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="435"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="450"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="450"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="450"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="450"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="450"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="465"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="465"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="465"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="465"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="480"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="480"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="480"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="480"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="480"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="495"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="495"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="495"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="495"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="510"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="510"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="510"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="510"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="510"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="525"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="525"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="525"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="525"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="540"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="540"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="540"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="540"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="540"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="555"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="555"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="555"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="555"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="570"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="570"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="570"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="570"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="570"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="585"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="585"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="585"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="585"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="600"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="600"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="600"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="600"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="600"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="615"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="615"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="615"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="615"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="630"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="630"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="630"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="630"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="630"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="645"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="645"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="645"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="645"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="660"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="660"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="660"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="660"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="660"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="675"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="675"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="675"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="675"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="690"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="690"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="690"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="690"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#006d32"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="690"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="705"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="705"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="705"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="705"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="720"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="720"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="720"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="720"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="720"
+                          y="70"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="735"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="735"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="735"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="735"
+                          y="56"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="750"
+                          y="0"
+                        >
+                        </rect>
+                        <rect
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="750"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="750"
+                          y="28"
+                        >
+                        </rect>
+                        <rect
+                          fill="#26a641"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="750"
+                          y="42"
+                        >
+                        </rect>
+                        <rect
+                          fill="#39d353"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="765"
+                          y="14"
+                        >
+                        </rect>
+                        <rect
+                          class="filter drop-shadow-[0_0_4px_#00f2ff]"
+                          fill="#00f2ff"
+                          height="11"
+                          rx="2"
+                          width="11"
+                          x="765"
+                          y="28"
+                        >
+                        </rect>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <!-- Heatmap Legend & Telemetry Readout -->
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-outline font-label-sm text-label-sm pt-2 gap-2"
+                >
+                  <span class="hover:text-neon-teal cursor-pointer"
+                  >Learn how contributions are calculated</span>
+                  <div class="flex items-center gap-1.5">
+                    <span>Less</span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-surface-container-high inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-[#006d32] inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-[#26a641] inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-[#39d353] inline-block"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-neon-teal inline-block shadow-[0_0_4px_rgba(0,242,255,0.8)]"
+                    ></span>
+                    <span>Overdrive</span>
+                  </div>
+                </div>
+              </section>
+            </main>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-surface-container-lowest py-8 border-t border-outline-variant/20"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-surface-variant"
+      >
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-neon-teal text-[18px]"
+          >terminal</span><span>GITHUB_TERMINAL_NODE // SEC_LVL_9</span><span>©
+            2025 GitHub, Inc. Operative Registry.</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a class="hover:text-neon-teal transition-colors" href="#">Terms</a><a
+            class="hover:text-neon-teal transition-colors"
+            href="#"
+          >Privacy</a><a class="hover:text-neon-teal transition-colors" href="#"
+          >Security</a><a
+            class="hover:text-neon-teal transition-colors"
+            href="#"
+          >Status</a><a class="hover:text-neon-teal transition-colors" href="#"
+          >Docs</a><a class="hover:text-neon-teal transition-colors" href="#"
+          >Telemetry API</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
