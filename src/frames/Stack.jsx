@@ -55,11 +55,17 @@ const groups = [
   },
 ];
 
-export function Stack() {
+/**
+ * @param {{ size?: "tablet" | "mobile" }} props
+ */
+export function Stack({ size } = {}) {
+  const frameName = size ? `stack-${size}` : "stack";
+  const sizeClass = size ? ` size-${size}` : "";
+
   return (
     <section
-      className="frame frame-stack"
-      data-frame="stack"
+      className={`frame frame-stack${sizeClass}`}
+      data-frame={frameName}
       aria-label="Stack coverage"
     >
       <div className="plate plate-stack">

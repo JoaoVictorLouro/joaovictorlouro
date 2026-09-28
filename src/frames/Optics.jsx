@@ -11,11 +11,17 @@ const buildings = [
   { left: "80%", width: "13%", height: "86%", windows: "magenta" },
 ];
 
-export function Optics() {
+/**
+ * @param {{ size?: "tablet" | "mobile" }} props
+ */
+export function Optics({ size } = {}) {
+  const frameName = size ? `optics-${size}` : "optics";
+  const sizeClass = size ? ` size-${size}` : "";
+
   return (
     <section
-      className="frame frame-optics"
-      data-frame="optics"
+      className={`frame frame-optics${sizeClass}`}
+      data-frame={frameName}
       aria-label="Optics feed"
     >
       <div className="plate plate-optics">

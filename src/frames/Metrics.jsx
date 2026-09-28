@@ -1,8 +1,14 @@
-export function Metrics() {
+/**
+ * @param {{ size?: "tablet" | "mobile" }} props
+ */
+export function Metrics({ size } = {}) {
+  const frameName = size ? `metrics-${size}` : "metrics";
+  const sizeClass = size ? ` size-${size}` : "";
+
   return (
     <section
-      className="frame frame-metrics"
-      data-frame="metrics"
+      className={`frame frame-metrics${sizeClass}`}
+      data-frame={frameName}
       aria-label="Experience metrics"
     >
       <div className="plate plate-metrics">

@@ -1,15 +1,31 @@
-![Kono Gaijin. Location Neo-Tokyo sector 4. Aka Kit - João Victor. Tech, travel, and life on the road.](assets/hero.png)
+<picture>
+  <source media="(max-width: 767px)" srcset="assets/hero-mobile.png">
+  <source media="(max-width: 1024px)" srcset="assets/hero-tablet.png">
+  <img alt="Kono Gaijin. Location Neo-Tokyo sector 4. Aka Kit - João Victor. Tech, travel, and life on the road." src="assets/hero.png">
+</picture>
 
 | TRANSMISSION_CHANNELS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Hi! I'm **João Victor Louro**, though most people call me **Kit**. I'm a Brazilian software engineer and a digital nomad. For 12+ years I've been shipping software that scales, mostly through consulting and freelance, and I write from wherever I happen to be.<br><br>I like living as an outsider — moving between countries, shipping from wherever I am. The public record lives on **[Kono Gaijin](https://konogaijin.com/)**, Japanese for "this foreigner."<br><br>I write about [travel, tech, and digital nomadism](https://konogaijin.com/en-us/articles/): how software actually gets built, and what it feels like to do that while you're in motion. The [portfolio](https://konogaijin.com/en-us/portfolio/) is the visual log. If you want to work together, I'm available for consulting and freelance — [say hello](https://konogaijin.com/en-us/about/). | ![Illustrated portrait of Kit. ID kit. Encrypted.](assets/portrait.png) |
 
 
-![Optics feed of a neon skyline. Location undefined. In transit.](assets/optics.png)
+<picture>
+  <source media="(max-width: 767px)" srcset="assets/optics-mobile.png">
+  <source media="(max-width: 1024px)" srcset="assets/optics-tablet.png">
+  <img alt="Optics feed of a neon skyline. Location undefined. In transit." src="assets/optics.png">
+</picture>
 
-![Experience metrics. 12 plus years shipping quality software that scales. 40 plus software projects delivered. Software engineering consulting and freelance.](assets/metrics.png)
+<picture>
+  <source media="(max-width: 767px)" srcset="assets/metrics-mobile.png">
+  <source media="(max-width: 1024px)" srcset="assets/metrics-tablet.png">
+  <img alt="Experience metrics. 12 plus years shipping quality software that scales. 40 plus software projects delivered. Software engineering consulting and freelance." src="assets/metrics.png">
+</picture>
 
-![Stack coverage. Frontend: React, Svelte, Vue, Astro, Angular, Vanilla. Backend: Node.js, Python, Rust, Java. Cloud: AWS, Azure, Google Cloud, Oracle Cloud, Hetzner. Virtualization: Docker, Kubernetes, K3s, k3d, EKS. DevOps: GitHub Actions, Jenkins, Travis CI, BuildKite, Forgejo, Gitea. AI: OpenAI, Claude, Google Gen-AI, OpenRouter, LangChain, RAG, LangGraph, LangSmith, ComfyUI, Custom Harnesses.](assets/stack.png)
+<picture>
+  <source media="(max-width: 767px)" srcset="assets/stack-mobile.png">
+  <source media="(max-width: 1024px)" srcset="assets/stack-tablet.png">
+  <img alt="Stack coverage. Frontend: React, Svelte, Vue, Astro, Angular, Vanilla. Backend: Node.js, Python, Rust, Java. Cloud: AWS, Azure, Google Cloud, Oracle Cloud, Hetzner. Virtualization: Docker, Kubernetes, K3s, k3d, EKS. DevOps: GitHub Actions, Jenkins, Travis CI, BuildKite, Forgejo, Gitea. AI: OpenAI, Claude, Google Gen-AI, OpenRouter, LangChain, RAG, LangGraph, LangSmith, ComfyUI, Custom Harnesses." src="assets/stack.png">
+</picture>
 
 ## CERTIFIED_QUALITY
 
@@ -41,4 +57,3 @@
 [SITE]   kono gaijin                ONLINE
 [WORK]   12+ years · 40+ projects   VERIFIED
 ```
-

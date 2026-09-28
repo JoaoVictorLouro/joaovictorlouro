@@ -1,8 +1,14 @@
-export function Hero() {
+/**
+ * @param {{ size?: "tablet" | "mobile" }} props
+ */
+export function Hero({ size } = {}) {
+  const frameName = size ? `hero-${size}` : "hero";
+  const sizeClass = size ? ` size-${size}` : "";
+
   return (
     <section
-      className="frame frame-hero"
-      data-frame="hero"
+      className={`frame frame-hero${sizeClass}`}
+      data-frame={frameName}
       aria-label="Kono Gaijin banner"
     >
       <div className="plate plate-hero">

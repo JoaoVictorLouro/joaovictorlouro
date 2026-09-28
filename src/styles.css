@@ -82,6 +82,28 @@ body {
   height: 440px;
 }
 
+.frame-hero.size-tablet,
+.frame-optics.size-tablet,
+.frame-metrics.size-tablet,
+.frame-stack.size-tablet {
+  width: 960px;
+}
+
+.frame-stack.size-tablet {
+  height: 520px;
+}
+
+.frame-hero.size-mobile,
+.frame-optics.size-mobile,
+.frame-metrics.size-mobile,
+.frame-stack.size-mobile {
+  width: 640px;
+}
+
+.frame-stack.size-mobile {
+  height: 560px;
+}
+
 .plate {
   position: absolute;
   inset: 0;
@@ -910,6 +932,59 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.frame-hero.size-tablet .hero-copy {
+  right: 40px;
+}
+
+.frame-hero.size-tablet .hero-stream {
+  display: none;
+}
+
+.frame-hero.size-mobile .hero-copy {
+  right: 24px;
+  left: 24px;
+  bottom: 24px;
+}
+
+.frame-hero.size-mobile .hero-stream {
+  display: none;
+}
+
+.frame-metrics.size-tablet .led-row,
+.frame-metrics.size-mobile .led-row {
+  padding: 18px 16px 0;
+}
+
+.frame-metrics.size-tablet .led-message,
+.frame-metrics.size-mobile .led-message {
+  padding: 12px 16px;
+}
+
+.frame-stack.size-tablet .plate-stack,
+.frame-stack.size-mobile .plate-stack {
+  padding: 20px 20px;
+}
+
+.frame-stack.size-tablet .stack-grid,
+.frame-stack.size-mobile .stack-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+.frame-stack.size-mobile .stack-banner {
+  margin-bottom: 12px;
+  padding-left: 16px;
+}
+
+.frame-stack.size-mobile .stack-card {
+  padding: 12px 14px;
+  gap: 8px;
+}
+
+.frame-stack.size-mobile .chips {
+  gap: 6px;
 }
 
 .material-symbols-outlined {

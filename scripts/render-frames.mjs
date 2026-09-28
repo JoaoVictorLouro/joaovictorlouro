@@ -7,7 +7,21 @@ import { PNG } from "pngjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = path.join(root, "assets");
-const frames = ["hero", "portrait", "optics", "metrics", "stack"];
+const frames = [
+  "hero",
+  "hero-tablet",
+  "hero-mobile",
+  "portrait",
+  "optics",
+  "optics-tablet",
+  "optics-mobile",
+  "metrics",
+  "metrics-tablet",
+  "metrics-mobile",
+  "stack",
+  "stack-tablet",
+  "stack-mobile",
+];
 const origin = "http://127.0.0.1:4178/";
 
 /**
@@ -99,7 +113,7 @@ try {
   const browser = await chromium.launch();
   const page = await browser.newPage({
     deviceScaleFactor: 2,
-    viewport: { width: 1440, height: 900 },
+    viewport: { width: 1440, height: 4800 },
   });
   await page.goto(origin, { waitUntil: "networkidle" });
   await page.addStyleTag({
